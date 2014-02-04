@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var cssmin = require('./');
 
 gulp.task('default', function () {
-    gulp.src('./sample/**/*.css')
+    gulp.src('./sample/test.css')
         .pipe(cssmin())
-        .pipe(gulp.dest('./sample/dist'));
+        .pipe(gulp.dest('./dist'));
 });
