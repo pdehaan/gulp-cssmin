@@ -27,7 +27,7 @@ gulp.task('default', function () {
 
 ## API
 
-### imagemin(options)
+### cssmin(options)
 
 See the css-min [options](https://github.com/GoalSmashers/clean-css).
 
