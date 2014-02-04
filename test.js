@@ -13,7 +13,7 @@ it('should minify css', function (cb) {
 	});
 
 	stream.write(new gutil.File({
-		// path: __dirname + '/fixture.png',
+		path: __dirname + '/sample/test.css',
 		contents: fs.readFileSync(__dirname + '/sample/test.css')
 	}));
 });

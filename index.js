@@ -32,28 +32,21 @@ module.exports = function (options) {
 				if (err) {
 					return cb(new gutil.PluginError('gulp-cssmin', err));
 				}
-				console.log(tempFile)
 
-				var minimized = CleanCSS.process(tempFile, options);
-				console.log(minimized)
-				cb(null, file);
-				// var origSize = stats.size;
+				options = options || {};
 
-				// imagemin(tempFile, tempFile, options, function () {
-				// 	fs.readFile(tempFile, function (err, data) {
-				// 		if (err) {
-				// 			return cb(new gutil.PluginError('gulp-imagemin', err));
-				// 		}
+				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
+					if (err) {
+						return cb(new gutil.PluginError('gulp-cssmin', err));
+					}
+					var minimized = new CleanCSS(options).minify(data);
+					gutil.log('gulp-cssmin:', gutil.colors.green('✔ ') + file.relative); 
+					file.contents = new Buffer(minimized);
+					cb(null, file);
 
-				// 		var saved = origSize - data.length;
-				// 		var savedMsg = saved > 0 ? 'saved ' + filesize(saved, {round: 1}) : 'already optimized';
+				
+				});
 
-				// 		gutil.log('gulp-imagemin:', gutil.colors.green('✔ ') + file.relative + gutil.colors.gray(' (' + savedMsg + ')'));
-
-				// 		file.contents = data;
-				// 		cb(null, file);
-				// 	});
-				// });
 			});
 		});
 	});
