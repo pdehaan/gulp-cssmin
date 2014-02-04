@@ -15,7 +15,7 @@ npm install --save-dev gulp-cssmin
 
 ```js
 var gulp = require('gulp');
-var imagemin = require('gulp-cssmin');
+var cssmin = require('gulp-cssmin');
 
 gulp.task('default', function () {
 	gulp.src('src/**/*.css')
