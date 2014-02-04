@@ -6,6 +6,10 @@ var cssmin = require('./index');
 
 it('should minify css', function (cb) {
 	var stream = cssmin();
+	stream.on('data', function (file) {
+		assert();
+		cb();
+	});
 
 	stream.write(new gutil.File({
 		path: __dirname + '/sample/test.css',
