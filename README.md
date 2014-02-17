@@ -1,5 +1,7 @@
 # gulp-cssmin
 
+[![Build Status](https://travis-ci.org/chilijung/gulp-cssmin.png?branch=master)](https://travis-ci.org/chilijung/gulp-cssmin)
+
 minify css using gulp.
 
 ## Install
