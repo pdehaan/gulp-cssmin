@@ -7,12 +7,12 @@ var cssmin = require('./index');
 it('should minify css', function (cb) {
 	var stream = cssmin();
 	stream.on('data', function (file) {
-		assert();
+		assert(file.contents.length < fs.statSync(__dirname + '/sample/type.css').size);
 		cb();
 	});
 
 	stream.write(new gutil.File({
-		path: __dirname + '/sample/test.css',
-		contents: fs.readFileSync(__dirname + '/sample/test.css')
+		path: __dirname + '/sample/type.css',
+		contents: fs.readFileSync(__dirname + '/sample/type.css')
 	}));
 });

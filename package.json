@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "keywords": [
-    "gulp",
+    "gulpjs",
     "min",
     "css"
   ],
@@ -22,6 +22,6 @@
   "author": "chilijung",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "~1.17.1"
   }
 }

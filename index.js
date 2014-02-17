@@ -43,8 +43,6 @@ module.exports = function (options) {
 					gutil.log('gulp-cssmin:', gutil.colors.green('✔ ') + file.relative); 
 					file.contents = new Buffer(minimized);
 					cb(null, file);
-
-				
 				});
 
 			});
