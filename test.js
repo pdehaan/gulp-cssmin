@@ -13,6 +13,6 @@ it('should minify css', function (cb) {
 
 	stream.write(new gutil.File({
 		path: __dirname + '/sample/type.css',
-		contents: fs.readFileSync(__dirname + '/sample/type.css')
+		contents: fs.readFileSync(__dirname + '/sample/type.min.css')
 	}));
 });
