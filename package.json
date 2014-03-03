@@ -8,6 +8,7 @@
   },
   "keywords": [
     "gulpjs",
+    "gulpplugin",
     "min",
     "css"
   ],
@@ -25,5 +26,11 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "~1.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chilijung/gulp-cssmin"
+  },
+  "homepage": "https://github.com/chilijung/gulp-cssmin/",
+  "bugs": "https://github.com/chilijung/gulp-cssmin/issues/"
 }
