@@ -17,7 +17,7 @@
     "filesize": "~2.0.0",
     "temp-write": "~0.1.0",
     "map-stream": "0.0.4",
-    "clean-css": "~2.0.7",
+    "clean-css": "~4.2.1",
     "gulp": "~3.5.2",
     "gulp-rename": "~1.1.0"
   },
